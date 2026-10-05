@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escuelita de Campo</title>
+  <meta name="description" content="Espacio educativo y de acompañamiento integral para niños y adolescentes, en contacto con la naturaleza, los animales, el deporte y el agua.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            forest: '#12261C',
+            moss: '#1F4030',
+            fern: '#4F8F5B',
+            lime: '#CFE86B',
+            cream: '#F6F1E7',
+            sun: '#F2B33D',
+            clay: '#C8754B',
+            lake: '#7DB4C4'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans bg-cream text-forest antialiased overflow-x-hidden">
+ 
+  <!-- Barra de progreso -->
+  <div class="fixed top-0 left-0 z-50 h-1 w-full bg-transparent"><div id="progress" class="h-full w-0 bg-lime"></div></div>
+ 
+  <!-- Navegación -->
+  <nav class="fixed top-4 left-1/2 z-40 -translate-x-1/2 w-[calc(100%-2rem)] max-w-xl" aria-label="Principal">
+    <ul class="flex items-center justify-between gap-1 rounded-full bg-forest/70 px-3 py-2 text-xs sm:text-sm font-medium text-cream backdrop-blur-xl ring-1 ring-white/10">
+      <li><a href="#propuesta" class="block rounded-full px-3 py-2 hover:bg-white/10">Propuesta</a></li>
+      <li><a href="#actividades" class="block rounded-full px-3 py-2 hover:bg-white/10">Actividades</a></li>
+      <li><a href="#manadas" class="block rounded-full px-3 py-2 hover:bg-white/10">Manadas</a></li>
+      <li><a href="#informacion" class="block rounded-full bg-lime px-3 py-2 text-forest">Info</a></li>
+    </ul>
+  </nav>
+ 
+  <!-- Hero -->
+  <header class="relative isolate flex min-h-screen items-center overflow-hidden bg-forest text-cream">
+    <div class="absolute -top-24 -right-24 -z-10 h-96 w-96 rounded-full bg-fern/50 blur-3xl" aria-hidden="true"></div>
+    <div class="absolute bottom-0 -left-24 -z-10 h-96 w-96 rounded-full bg-sun/30 blur-3xl" aria-hidden="true"></div>
+    <div class="absolute top-1/3 right-8 -z-10 hidden h-64 w-64 rounded-full bg-lime/20 blur-2xl md:block" aria-hidden="true"></div>
+ 
+    <div class="mx-auto w-full max-w-6xl px-6 pt-28 pb-20">
+      <div data-reveal="up" class="inline-flex items-center gap-3 rounded-full bg-white/10 py-2 pr-5 pl-2 text-sm backdrop-blur ring-1 ring-white/15">
+        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-lime text-forest"><i class="fa-solid fa-calendar-day text-xs" aria-hidden="true"></i></span>
+        Abrimos el lunes 16 de noviembre de 2026
+      </div>
+ 
+      <h1 data-reveal="up" data-delay="150" class="mt-8 text-[clamp(3.2rem,12vw,9rem)] font-extrabold leading-[0.95] tracking-tighter">Escuelita<br>de Campo</h1>
+ 
+      <p class="sr-only">Naturaleza, Caballos, Deporte, Agua, Amistad</p>
+      <ul class="mt-10 flex flex-wrap gap-3" aria-hidden="true">
+        <li data-reveal="up" data-delay="350" class="rounded-full bg-fern px-5 py-2.5 font-medium"><i class="fa-solid fa-seedling mr-2"></i>Naturaleza</li>
+        <li data-reveal="up" data-delay="450" class="rounded-full bg-clay px-5 py-2.5 font-medium"><i class="fa-solid fa-horse mr-2"></i>Caballos</li>
+        <li data-reveal="up" data-delay="550" class="rounded-full bg-sun px-5 py-2.5 font-medium text-forest"><i class="fa-solid fa-person-running mr-2"></i>Deporte</li>
+        <li data-reveal="up" data-delay="650" class="rounded-full bg-lake px-5 py-2.5 font-medium text-forest"><i class="fa-solid fa-person-swimming mr-2"></i>Agua</li>
+        <li data-reveal="up" data-delay="750" class="rounded-full bg-lime px-5 py-2.5 font-medium text-forest"><i class="fa-solid fa-heart mr-2"></i>Amistad</li>
+      </ul>
+ 
+      <a href="#propuesta" data-reveal="up" data-delay="900" class="mt-14 inline-flex items-center gap-3 text-sm font-medium text-cream/70 hover:text-cream">
+        Seguí bajando <i class="fa-solid fa-arrow-down animate-bounce" aria-hidden="true"></i>
+      </a>
+    </div>
+  </header>
+ 
+  <main>
+ 
+    <!-- Fundamentación -->
+    <section id="propuesta" class="mx-auto max-w-6xl px-6 py-24 sm:py-36">
+      <h2 data-reveal="up" class="max-w-4xl text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Un lugar para aprender, expresarse, sentirse acompañados y crecer en comunidad.</h2>
+ 
+      <div class="mt-12 grid gap-8 md:grid-cols-2 md:gap-16">
+        <p data-reveal="up" class="text-lg leading-relaxed text-forest/80">La Escuelita de Campo es un espacio educativo, formativo y de acompañamiento integral para niños y adolescentes. Busca transmitir herramientas, valores y aprendizajes a través del vínculo con la naturaleza, los animales, el deporte, el movimiento, el juego y la convivencia.</p>
+        <p data-reveal="up" data-delay="150" class="text-lg leading-relaxed text-forest/80">Queremos construir un camino de autonomía, confianza, responsabilidad, respeto y pertenencia. Es un proyecto que nace del amor y busca generar aprendizaje, bienestar y prosperidad compartida.</p>
+      </div>
+ 
+      <div class="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div data-reveal="scale" class="rounded-[2rem] bg-lime p-7">
+          <i class="fa-solid fa-hand-holding-heart text-3xl" aria-hidden="true"></i>
+          <h3 class="mt-10 text-2xl font-bold">Cuidar</h3>
+          <p class="mt-2 text-sm leading-relaxed">A uno mismo, a los demás, a los animales y al entorno.</p>
+        </div>
+        <div data-reveal="scale" data-delay="120" class="rounded-[2rem] bg-sun p-7">
+          <i class="fa-solid fa-person-running text-3xl" aria-hidden="true"></i>
+          <h3 class="mt-10 text-2xl font-bold">Moverse</h3>
+          <p class="mt-2 text-sm leading-relaxed">Deporte, desafíos, agua y disfrute corporal.</p>
+        </div>
+        <div data-reveal="scale" data-delay="240" class="rounded-[2rem] bg-lake p-7">
+          <i class="fa-solid fa-lightbulb text-3xl" aria-hidden="true"></i>
+          <h3 class="mt-10 text-2xl font-bold">Aprender</h3>
+          <p class="mt-2 text-sm leading-relaxed">De manera experiencial, a través del juego y la vida cotidiana.</p>
+        </div>
+        <div data-reveal="scale" data-delay="360" class="rounded-[2rem] bg-clay p-7 text-cream">
+          <i class="fa-solid fa-people-group text-3xl" aria-hidden="true"></i>
+          <h3 class="mt-10 text-2xl font-bold">Vincularse</h3>
+          <p class="mt-2 text-sm leading-relaxed">Amistad, cooperación, escucha y sentido de pertenencia.</p>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- Actividades -->
+    <section id="actividades" class="rounded-t-[2.5rem] bg-moss py-24 text-cream sm:rounded-t-[4rem] sm:py-36">
+      <div class="mx-auto max-w-6xl px-6">
+        <h2 data-reveal="up" class="max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-5xl">El enfoque pedagógico de las actividades</h2>
+ 
+        <div class="mt-10 grid gap-4 lg:grid-cols-5">
+          <div data-reveal="left" class="rounded-[2rem] bg-white/10 p-8 lg:col-span-3">
+            <p class="text-lg leading-relaxed text-cream/90">Todas las actividades de la escuela están diseñadas bajo un modelo experiencial, donde el aprendizaje se da a través del juego y de las situaciones de la vida cotidiana.</p>
+            <p class="mt-4 text-lg leading-relaxed text-cream/90">El objetivo transversal de cada tarea es construir autonomía, confianza, responsabilidad y respeto en los participantes.</p>
+          </div>
+          <div data-reveal="right" class="rounded-[2rem] bg-lime p-8 text-forest lg:col-span-2">
+            <h3 class="text-xl font-bold">Categorías de actividades diarias</h3>
+            <p class="mt-3 leading-relaxed">Las jornadas se dividen en diferentes áreas de experiencia que buscan hacer crecer cuerpo, mente y corazón.</p>
+            <div class="mt-5 flex gap-3 text-2xl" aria-hidden="true"><i class="fa-solid fa-dumbbell"></i><i class="fa-solid fa-brain"></i><i class="fa-solid fa-heart"></i></div>
+          </div>
+        </div>
+ 
+        <div class="mt-4 grid gap-4 md:grid-cols-6">
+          <article data-reveal="left" class="rounded-[2rem] bg-clay p-8 text-cream md:col-span-3">
+            <i class="fa-solid fa-horse text-4xl" aria-hidden="true"></i>
+            <h3 class="mt-8 text-2xl font-bold">Vínculo con animales</h3>
+            <ul class="mt-5 space-y-3 text-sm leading-relaxed "><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Contacto directo con caballos y otros animales de la escuela.</span></li><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Se enseña y practica el cuidado responsable de los animales.</span></li><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Fomentamos la empatía.</span></li></ul>
+          </article>
+          <article data-reveal="right" class="rounded-[2rem] bg-fern p-8 text-cream md:col-span-3">
+            <i class="fa-solid fa-seedling text-4xl" aria-hidden="true"></i>
+            <h3 class="mt-8 text-2xl font-bold">Naturaleza y campo</h3>
+            <ul class="mt-5 space-y-3 text-sm leading-relaxed "><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Exploraciones guiadas por el campo.</span></li><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Actividades prácticas en la huerta.</span></li><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Enseñamos activamente el cuidado del entorno y la conexión con la naturaleza.</span></li></ul>
+          </article>
+          <article data-reveal="up" class="rounded-[2rem] bg-sun p-8 text-forest md:col-span-2">
+            <i class="fa-solid fa-person-running text-4xl" aria-hidden="true"></i>
+            <h3 class="mt-8 text-2xl font-bold">Deporte y movimiento corporal</h3>
+            <ul class="mt-5 space-y-3 text-sm leading-relaxed "><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Entrenamiento, gimnasia, baile y diversos deportes.</span></li><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Distintos desafíos físicos para fomentar el disfrute corporal y el movimiento constante.</span></li></ul>
+          </article>
+          <article data-reveal="up" data-delay="120" class="rounded-[2rem] bg-lake p-8 text-forest md:col-span-2">
+            <i class="fa-solid fa-person-swimming text-4xl" aria-hidden="true"></i>
+            <h3 class="mt-8 text-2xl font-bold">Actividades acuáticas</h3>
+            <ul class="mt-5 space-y-3 text-sm leading-relaxed "><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Clases de natación con enfoque de deporte formativo.</span></li><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Espacios dedicados puramente a la recreación acuática y el disfrute en el agua.</span></li></ul>
+          </article>
+          <article data-reveal="up" data-delay="240" class="rounded-[2rem] bg-lime p-8 text-forest md:col-span-2">
+            <i class="fa-solid fa-palette text-4xl" aria-hidden="true"></i>
+            <h3 class="mt-8 text-2xl font-bold">Creatividad y educación emocional</h3>
+            <ul class="mt-5 space-y-3 text-sm leading-relaxed "><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Actividades orientadas al arte y la expresión creativa.</span></li><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Espacios de educación emocional: cuidado de uno mismo y fomento de la autonomía.</span></li></ul>
+          </article>
+          <article data-reveal="scale" class="rounded-[2rem] bg-cream p-8 text-forest md:col-span-6">
+            <i class="fa-solid fa-mug-hot text-4xl" aria-hidden="true"></i>
+            <h3 class="mt-8 text-2xl font-bold">Encuentro, socialización y convivencia</h3>
+            <ul class="mt-5 space-y-3 text-sm leading-relaxed "><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Todos los días compartimos el momento de la merienda.</span></li><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Instancias pensadas para practicar la escucha, la cooperación, forjar amistades y afianzar el sentido de pertenencia al grupo.</span></li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- Manadas -->
+    <section id="manadas" class="py-24 sm:py-36">
+      <div class="mx-auto max-w-6xl px-6">
+        <h2 data-reveal="up" class="max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Las actividades según las manadas</h2>
+        <p data-reveal="up" data-delay="100" class="mt-6 max-w-2xl text-lg leading-relaxed text-forest/80">Si bien la comunidad es una sola, las actividades y sus desafíos se adaptan a las diferentes edades y etapas de desarrollo de cada grupo. Cada manada tiene su propia identidad, con un color y un símbolo que la representan.</p>
+      </div>
+ 
+      <div class="mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-6 lg:mx-auto lg:grid lg:max-w-6xl lg:grid-cols-5 lg:overflow-visible">
+        <article data-reveal="up" class="min-w-[78%] snap-center rounded-[2rem] bg-sun text-forest p-7 sm:min-w-[45%] lg:min-w-0">
+          <p class="text-5xl font-extrabold tracking-tighter text-forest">2½–3</p>
+          <p class="text-sm font-medium">años · Niños</p>
+          <h3 class="mt-10 text-xl font-bold">Primeros exploradores</h3>
+          <p class="mt-2 text-sm leading-relaxed">Las actividades están enfocadas en sus primeras exploraciones del entorno y de sí mismos.</p>
+        </article>
+        <article data-reveal="up" data-delay="120" class="min-w-[78%] snap-center rounded-[2rem] bg-fern text-cream p-7 sm:min-w-[45%] lg:min-w-0">
+          <p class="text-5xl font-extrabold tracking-tighter ">4–5/6</p>
+          <p class="text-sm font-medium">años · Niños</p>
+          <h3 class="mt-10 text-xl font-bold">Juego y descubrimiento</h3>
+          <p class="mt-2 text-sm leading-relaxed">La dinámica principal es el descubrimiento a través del juego.</p>
+        </article>
+        <article data-reveal="up" data-delay="240" class="min-w-[78%] snap-center rounded-[2rem] bg-lake text-forest p-7 sm:min-w-[45%] lg:min-w-0">
+          <p class="text-5xl font-extrabold tracking-tighter text-forest">7–9</p>
+          <p class="text-sm font-medium">años · Niños</p>
+          <h3 class="mt-10 text-xl font-bold">Movimiento y aventura</h3>
+          <p class="mt-2 text-sm leading-relaxed">Las actividades incrementan su nivel de movimiento y adoptan un formato de aventura.</p>
+        </article>
+        <article data-reveal="up" data-delay="360" class="min-w-[78%] snap-center rounded-[2rem] bg-clay text-cream p-7 sm:min-w-[45%] lg:min-w-0">
+          <p class="text-5xl font-extrabold tracking-tighter ">10–12</p>
+          <p class="text-sm font-medium">años · Preadolescentes</p>
+          <h3 class="mt-10 text-xl font-bold">Desafíos y autonomía</h3>
+          <p class="mt-2 text-sm leading-relaxed">Las propuestas incluyen desafíos más complejos, pensados para fomentar su autonomía personal.</p>
+        </article>
+        <article data-reveal="up" data-delay="480" class="min-w-[78%] snap-center rounded-[2rem] bg-forest text-cream p-7 sm:min-w-[45%] lg:min-w-0">
+          <p class="text-5xl font-extrabold tracking-tighter text-lime">13–17</p>
+          <p class="text-sm font-medium">años · Adolescentes</p>
+          <h3 class="mt-10 text-xl font-bold">Pertenencia y crecimiento</h3>
+          <p class="mt-2 text-sm leading-relaxed">Las dinámicas están orientadas a su crecimiento personal y a consolidar su sentido de pertenencia en la comunidad.</p>
+        </article>
+      </div>
+    </section>
+ 
+    <!-- Información útil -->
+    <section id="informacion" class="rounded-t-[2.5rem] bg-forest py-24 text-cream sm:rounded-t-[4rem] sm:py-36">
+      <div class="mx-auto max-w-6xl px-6">
+        <h2 data-reveal="up" class="text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Información útil</h2>
+ 
+        <div class="mt-14 grid gap-4 md:grid-cols-4">
+          <div data-reveal="up" class="rounded-[2rem] bg-lime p-7 text-forest md:col-span-2">
+            <i class="fa-solid fa-calendar-day text-3xl" aria-hidden="true"></i>
+            <h3 class="mt-10 text-sm font-medium">Fecha de apertura</h3>
+            <p class="text-3xl font-extrabold tracking-tight sm:text-4xl">Lunes 16 de noviembre de 2026</p>
+          </div>
+          <div data-reveal="up" data-delay="120" class="rounded-[2rem] bg-white/10 p-7">
+            <i class="fa-solid fa-clock text-3xl text-sun" aria-hidden="true"></i>
+            <h3 class="mt-10 text-sm font-medium text-cream/70">Horario</h3>
+            <p class="text-xl font-bold">Lunes a jueves, de 15:30 a 19:30</p>
+          </div>
+          <div data-reveal="up" data-delay="240" class="rounded-[2rem] bg-white/10 p-7">
+            <i class="fa-solid fa-location-dot text-3xl text-sun" aria-hidden="true"></i>
+            <h3 class="mt-10 text-sm font-medium text-cream/70">Ubicación</h3>
+            <p class="text-xl font-bold">Solares de la Laguna</p>
+          </div>
+        </div>
+ 
+        <div class="mt-16 grid gap-10 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <h3 data-reveal="up" class="text-2xl font-bold">Modalidades de asistencia</h3>
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+              <div data-reveal="scale" class="rounded-[2rem] bg-sun p-7 text-forest">
+                <p class="text-4xl font-extrabold tracking-tighter">4 días</p>
+                <h4 class="mt-6 font-bold">Completa</h4>
+                <p class="mt-1 text-sm">4 días semanales, de lunes a jueves.</p>
+              </div>
+              <div data-reveal="scale" data-delay="150" class="rounded-[2rem] bg-lake p-7 text-forest">
+                <p class="text-4xl font-extrabold tracking-tighter">2 días</p>
+                <h4 class="mt-6 font-bold">Días fijos</h4>
+                <p class="mt-1 text-sm">Lunes y miércoles, o martes y jueves.</p>
+              </div>
+            </div>
+            <p data-reveal="up" class="mt-6 leading-relaxed text-cream/75">Edades: de 2 años y medio a 17 años. El ingreso se realiza por cupos, con un período de adaptación y posterior confirmación de los grupos.</p>
+          </div>
+ 
+          <div>
+            <h3 data-reveal="up" class="text-2xl font-bold">Ciclo anual</h3>
+            <ol class="mt-6 space-y-3">
+              <li data-reveal="right" class="flex gap-5 rounded-3xl bg-white/10 p-5"><span class="w-28 shrink-0 font-bold text-lime">Noviembre</span><span class="text-sm leading-relaxed">Inicio el 16, con 2 semanas de adaptación y conformación de manadas.</span></li>
+              <li data-reveal="right" data-delay="100" class="flex gap-5 rounded-3xl bg-white/10 p-5"><span class="w-28 shrink-0 font-bold text-lime">Dic. a feb.</span><span class="text-sm leading-relaxed">Temporada de verano, con opción de modalidad mensual o temporada completa.</span></li>
+              <li data-reveal="right" data-delay="200" class="flex gap-5 rounded-3xl bg-white/10 p-5"><span class="w-28 shrink-0 font-bold text-lime">Enero</span><span class="text-sm leading-relaxed">Presentación de la propuesta anual.</span></li>
+              <li data-reveal="right" data-delay="300" class="flex gap-5 rounded-3xl bg-white/10 p-5"><span class="w-28 shrink-0 font-bold text-lime">Desde marzo</span><span class="text-sm leading-relaxed">Inicio del nuevo ciclo y comunicación sobre la continuidad.</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+  </main>
+ 
+  <!-- Footer -->
+  <footer class="bg-lime text-forest">
+    <div class="mx-auto max-w-6xl px-6 py-24 text-center sm:py-32">
+      <p data-reveal="up" class="text-4xl font-extrabold tracking-tighter sm:text-7xl">Escuelita de Campo</p>
+      <p data-reveal="up" data-delay="100" class="mt-4 font-medium">Naturaleza, Caballos, Deporte, Agua, Amistad</p>
+      <p data-reveal="scale" data-delay="200" class="mt-10 inline-flex items-center gap-3 rounded-full bg-forest px-8 py-4 text-lg font-semibold text-cream">
+        <i class="fa-solid fa-envelope-open-text text-lime" aria-hidden="true"></i>
+        Inscripción y contacto: Próximamente
+      </p>
+      <p class="mt-16 text-xs text-forest/60">Un proyecto que nace del amor · Solares de la Laguna</p>
+    </div>
+  </footer>
+ 
+  <script>
+    // Aparición al hacer scroll (se respeta "reducir movimiento")
+    (function () {
+      var bar = document.getElementById('progress');
+      function updateBar() {
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      }
+      window.addEventListener('scroll', updateBar, { passive: true });
+      updateBar();
+ 
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('[data-reveal]');
+      if (reduce || !('IntersectionObserver' in window)) return;
+ 
+      var hidden = {
+        up: ['opacity-0', 'translate-y-10'],
+        left: ['opacity-0', '-translate-x-10'],
+        right: ['opacity-0', 'translate-x-10'],
+        scale: ['opacity-0', 'scale-90']
+      };
+      var base = ['transition-all', 'duration-700', 'ease-out'];
+ 
+      els.forEach(function (el) {
+        el.classList.add.apply(el.classList, base.concat(hidden[el.dataset.reveal] || hidden.up));
+        el.style.transitionDelay = (el.dataset.delay || 0) + 'ms';
+      });
+ 
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          var el = e.target;
+          el.classList.remove.apply(el.classList, hidden[el.dataset.reveal] || hidden.up);
+          io.unobserve(el);
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+ 
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
