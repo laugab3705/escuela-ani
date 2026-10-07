@@ -263,10 +263,21 @@
     <div class="mx-auto max-w-6xl px-6 py-24 text-center sm:py-32">
       <p data-reveal="up" class="text-4xl font-extrabold tracking-tighter sm:text-7xl">Escuelita de Campo</p>
       <p data-reveal="up" data-delay="100" class="mt-4 font-medium">Naturaleza, Caballos, Deporte, Agua, Amistad</p>
-      <p data-reveal="scale" data-delay="200" class="mt-10 inline-flex items-center gap-3 rounded-full bg-forest px-8 py-4 text-lg font-semibold text-cream">
-        <i class="fa-solid fa-envelope-open-text text-lime" aria-hidden="true"></i>
-        Inscripción y contacto: Próximamente
-      </p>
+        <div data-reveal="scale" data-delay="200" class="mt-10 flex flex-wrap justify-center gap-4">
+    <!-- Botón Inscripción -->
+    <button type="button" id="btn-inscripcion" class="group relative overflow-hidden inline-flex items-center gap-3 rounded-full bg-forest px-8 py-4 text-lg font-bold text-cream shadow-[0_4px_15px_rgba(0,0,0,0.35)] transition-transform duration-200 hover:-translate-y-1">
+      <div class="absolute -top-1/2 -left-[75%] h-[200%] w-1/2 rotate-[30deg] bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-opacity group-hover:animate-[sweep_4s_ease-in-out_infinite] group-hover:opacity-100" aria-hidden="true"></div>
+      <i class="fa-solid fa-clipboard-list text-lime" aria-hidden="true"></i>
+      Inscripción
+    </button>
+
+    <!-- Botón Contacto -->
+    <button type="button" id="btn-contacto" class="group relative overflow-hidden inline-flex items-center gap-3 rounded-full bg-forest px-8 py-4 text-lg font-bold text-cream shadow-[0_4px_15px_rgba(0,0,0,0.35)] transition-transform duration-200 hover:-translate-y-1">
+      <div class="absolute -top-1/2 -left-[75%] h-[200%] w-1/2 rotate-[30deg] bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-opacity group-hover:animate-[sweep_4s_ease-in-out_infinite] group-hover:opacity-100" aria-hidden="true"></div>
+      <i class="fa-brands fa-whatsapp text-lime" aria-hidden="true"></i>
+      Contacto
+    </button>
+      </div>
       <p class="mt-16 text-xs text-forest/60">Un proyecto que nace del amor · Solares de la Laguna</p>
     </div>
   </footer>
@@ -309,6 +320,44 @@
       }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
  
       els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+    <script>
+    (function initFooterButtons() {
+      // Buscamos los botones por su ID
+      const btnContacto = document.getElementById('btn-contacto');
+      const btnInscripcion = document.getElementById('btn-inscripcion');
+      
+      // 1. ACÁ PONÉS TU NÚMERO DE WHATSAPP
+      // Formato: código de país (54) + 9 + código de área + número. Sin el signo +, sin 0 y sin 15.
+      const whatsappNumber = '5493426490187'; 
+
+      // 2. CONFIGURACIÓN DEL BOTÓN "CONTACTO"
+      if (btnContacto) {
+        btnContacto.addEventListener('click', () => {
+          // Texto que aparecerá preescrito en WhatsApp
+          const text = encodeURIComponent('¡Hola! Me gustaría recibir más información sobre la Escuelita de Campo.');
+          // Abre WhatsApp en una pestaña nueva
+          window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank', 'noopener');
+        });
+      }
+
+      // 3. CONFIGURACIÓN DEL BOTÓN "INSCRIPCIÓN"
+      if (btnInscripcion) {
+        btnInscripcion.addEventListener('click', () => {
+          
+          /* --- OPCIÓN A: Abrir WhatsApp con otro mensaje --- */
+          const text = encodeURIComponent('¡Hola! Quiero consultar por las inscripciones y cupos disponibles para la Escuelita de Campo.');
+          window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank', 'noopener');
+          
+          /* --- OPCIÓN B: Ir a un enlace externo (Ej: Google Forms) --- */
+          /* Si preferís usar un link, BORRÁ las dos líneas de arriba de la OPCIÓN A 
+            y quitá las dos barras (//) de la línea de abajo para activarla: */
+            
+          // window.open('https://tu-url-del-formulario-o-web.com', '_blank', 'noopener');
+          
+        });
+      }
     })();
   </script>
 </body>
