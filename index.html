@@ -365,15 +365,16 @@
       if (btnInscripcion) {
         btnInscripcion.addEventListener('click', () => {
           
-          /* --- OPCIÓN A: Abrir WhatsApp con otro mensaje --- */
+          /* --- OPCIÓN A: Abrir WhatsApp con otro mensaje --- 
           const text = encodeURIComponent('¡Hola! Quiero consultar por las inscripciones y cupos disponibles para la Escuelita de Campo.');
-          window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank', 'noopener');
+          window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank', 'noopener');*/
           
           /* --- OPCIÓN B: Ir a un enlace externo (Ej: Google Forms) --- */
           /* Si preferís usar un link, BORRÁ las dos líneas de arriba de la OPCIÓN A 
             y quitá las dos barras (//) de la línea de abajo para activarla: */
             
-          // window.open('https://tu-url-del-formulario-o-web.com', '_blank', 'noopener');
+          window.open('https://docs.google.com/forms/d/e/1FAIpQLSfW7USEuvcADK74mh8wvcPKPVkLXLfsI2tyi1uj1oWC_PjOqw/viewform?usp=publish-editor', '_blank', 'noopener');
+          //window.location.href = 'formulario.html';
           
         });
       }

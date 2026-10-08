@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inscripción - Escuelita de Campo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            forest: '#12261C', moss: '#1F4030', fern: '#4F8F5B', lime: '#CFE86B',
+            cream: '#F6F1E7', sun: '#F2B33D', clay: '#C8754B', lake: '#7DB4C4'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans bg-cream text-forest antialiased overflow-x-hidden">
+
+  <!-- Botón Volver -->
+  <nav class="fixed top-4 left-4 z-50">
+    <a href="index.html" class="inline-flex items-center gap-2 rounded-full bg-forest/80 px-4 py-2 text-sm font-medium text-cream backdrop-blur-xl ring-1 ring-white/10 transition-transform hover:-translate-y-1">
+      <i class="fa-solid fa-arrow-left"></i> Volver
+    </a>
+  </nav>
+
+  <!-- CABECERA -->
+  <header class="relative flex min-h-[30vh] items-center justify-center overflow-hidden bg-forest text-cream pt-10">
+    <div class="absolute -top-24 -right-24 -z-10 h-64 w-64 rounded-full bg-fern/50 blur-3xl"></div>
+    <div class="text-center px-6">
+      <i class="fa-solid fa-clipboard-list text-4xl text-lime mb-4" data-reveal="up"></i>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter" data-reveal="up" data-delay="100">Inscripción</h1>
+      <p class="mt-4 text-cream/70" data-reveal="up" data-delay="200">Completá los datos para solicitar tu cupo</p>
+    </div>
+  </header>
+
+  <!-- FORMULARIO -->
+  <main class="mx-auto max-w-2xl px-6 py-16">
+    <form id="form-inscripcion" class="bg-white rounded-[2rem] p-8 sm:p-12 shadow-sm border border-forest/5" data-reveal="up">
+      
+      <!-- Datos del Tutor -->
+      <div class="mb-8">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-user-tie text-clay"></i> Adulto responsable</h2>
+        <div class="mb-4">
+          <label for="tutor" class="block text-sm font-semibold mb-2 text-forest/80">Nombre y apellido</label>
+          <input type="text" id="tutor" required class="w-full bg-cream/50 border border-forest/20 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent transition-all">
+        </div>
+      </div>
+
+      <!-- Datos del Niño/a -->
+      <div class="mb-8">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-child-reaching text-sun"></i> Participante</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="sm:col-span-2">
+            <label for="nino" class="block text-sm font-semibold mb-2 text-forest/80">Nombre del niño/a</label>
+            <input type="text" id="nino" required class="w-full bg-cream/50 border border-forest/20 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent transition-all">
+          </div>
+          <div>
+            <label for="edad" class="block text-sm font-semibold mb-2 text-forest/80">Edad</label>
+            <input type="number" id="edad" min="2" max="17" required class="w-full bg-cream/50 border border-forest/20 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent transition-all">
+          </div>
+        </div>
+      </div>
+
+      <!-- Modalidad -->
+      <div class="mb-8">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-calendar-check text-lake"></i> Preferencias</h2>
+        <label for="modalidad" class="block text-sm font-semibold mb-2 text-forest/80">Modalidad de asistencia</label>
+        <select id="modalidad" required class="w-full bg-cream/50 border border-forest/20 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent transition-all appearance-none cursor-pointer">
+          <option value="" disabled selected>Seleccioná una opción...</option>
+          <option value="Completa (4 días: Lunes a Jueves)">Completa (4 días: Lunes a Jueves)</option>
+          <option value="Días fijos (Lunes y Miércoles)">2 días (Lunes y Miércoles)</option>
+          <option value="Días fijos (Martes y Jueves)">2 días (Martes y Jueves)</option>
+        </select>
+      </div>
+
+      <!-- Observaciones -->
+      <div class="mb-10">
+        <label for="observaciones" class="block text-sm font-semibold mb-2 text-forest/80">Alergias, menú especial u observaciones médicas (Opcional)</label>
+        <textarea id="observaciones" rows="3" class="w-full bg-cream/50 border border-forest/20 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent transition-all"></textarea>
+      </div>
+
+      <!-- Botón Enviar -->
+      <button type="submit" class="w-full inline-flex justify-center items-center gap-3 rounded-full bg-lime px-8 py-4 text-lg font-bold text-forest shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-transform duration-200 hover:-translate-y-1">
+        <i class="fa-brands fa-whatsapp text-xl"></i>
+        Enviar solicitud por WhatsApp
+      </button>
+      <p class="text-xs text-center text-forest/50 mt-4">Al hacer clic, se abrirá WhatsApp con los datos listos para enviar.</p>
+
+    </form>
+  </main>
+
+  <script>
+    // Lógica para capturar los datos y enviarlos a WhatsApp
+    document.getElementById('form-inscripcion').addEventListener('submit', function(e) {
+      e.preventDefault(); // Evita que la página se recargue
+
+      // 1. ACÁ PONÉS TU NÚMERO DE WHATSAPP
+      const whatsappNumber = '5493425784421'; 
+
+      // 2. Capturamos los valores de los inputs
+      const tutor = document.getElementById('tutor').value.trim();
+      const nino = document.getElementById('nino').value.trim();
+      const edad = document.getElementById('edad').value.trim();
+      const modalidad = document.getElementById('modalidad').value;
+      const observaciones = document.getElementById('observaciones').value.trim();
+
+      // 3. Armamos el texto del mensaje con formato (negritas, saltos de línea)
+      const textoMensaje = 
+        `🌿 *Nueva solicitud de inscripción - Escuelita de Campo*\n\n` +
+        `*Datos del adulto responsable:*\n👤 Nombre: ${tutor}\n\n` +
+        `*Datos del participante:*\n🧒 Nombre: ${nino}\n🎂 Edad: ${edad} años\n\n` +
+        `*Preferencias:*\n🗓 Modalidad: ${modalidad}\n` +
+        (observaciones ? `\n⚠️ *Observaciones médicas/alimentarias:*\n${observaciones}` : '');
+
+      // 4. Codificamos el texto para que funcione en la URL
+      const textoCodificado = encodeURIComponent(textoMensaje);
+
+      // 5. Abrimos WhatsApp en una nueva pestaña
+      window.open(`https://wa.me/${whatsappNumber}?text=${textoCodificado}`, '_blank', 'noopener');
+    });
+
+    // Script de animaciones de scroll
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('[data-reveal]');
+      if (reduce || !('IntersectionObserver' in window)) return;
+      var hidden = { up: ['opacity-0', 'translate-y-10'] };
+      var base = ['transition-all', 'duration-700', 'ease-out'];
+      els.forEach(function (el) {
+        el.classList.add.apply(el.classList, base.concat(hidden[el.dataset.reveal] || hidden.up));
+        el.style.transitionDelay = (el.dataset.delay || 0) + 'ms';
+      });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          var el = e.target;
+          el.classList.remove.apply(el.classList, hidden[el.dataset.reveal] || hidden.up);
+          io.unobserve(el);
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
