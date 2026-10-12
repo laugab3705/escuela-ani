@@ -23,7 +23,9 @@
             cream: '#F6F1E7',
             sun: '#F2B33D',
             clay: '#C8754B',
-            lake: '#7DB4C4'
+            lake: '#7DB4C4',
+            wood: '#B37055',
+            river: '#4A8DB7'
           }
         }
       }
@@ -59,7 +61,7 @@
  
       <h1 data-reveal="up" data-delay="150" class="mt-8 text-[clamp(3.2rem,12vw,9rem)] font-extrabold leading-[0.95] tracking-tighter">Escuelita<br>de Campo</h1>
  
-      <p class="sr-only">Naturaleza, Caballos, Deporte, Agua, Amistad</p>
+      <p class="sr-only">Naturaleza, Caballos, Deporte, Agua, Amistad, Arte, Musica</p>
       <div class="mt-10 flex flex-wrap gap-3">
         <a href="naturaleza.html" data-reveal="up" data-delay="350" class="rounded-full bg-fern px-5 py-2.5 font-medium transition-transform hover:-translate-y-1 hover:brightness-110">
           <i class="fa-solid fa-seedling mr-2"></i>Naturaleza
@@ -69,16 +71,24 @@
           <i class="fa-solid fa-horse mr-2"></i>Caballos
         </a>
         
-        <a href="deporte.html" data-reveal="up" data-delay="550" class="rounded-full bg-sun px-5 py-2.5 font-medium text-forest transition-transform hover:-translate-y-1 hover:brightness-110">
+        <a href="deporte.html" data-reveal="up" data-delay="550" class="rounded-full bg-sun px-5 py-2.5 font-medium transition-transform hover:-translate-y-1 hover:brightness-110">
           <i class="fa-solid fa-person-running mr-2"></i>Deporte
         </a>
         
-        <a href="agua.html" data-reveal="up" data-delay="650" class="rounded-full bg-lake px-5 py-2.5 font-medium text-forest transition-transform hover:-translate-y-1 hover:brightness-110">
+        <a href="agua.html" data-reveal="up" data-delay="650" class="rounded-full bg-lake px-5 py-2.5 font-medium transition-transform hover:-translate-y-1 hover:brightness-110">
           <i class="fa-solid fa-person-swimming mr-2"></i>Agua
         </a>
         
-        <a href="amistad.html" data-reveal="up" data-delay="750" class="rounded-full bg-lime px-5 py-2.5 font-medium text-forest transition-transform hover:-translate-y-1 hover:brightness-110">
+        <a href="amistad.html" data-reveal="up" data-delay="750" class="rounded-full bg-lime px-5 py-2.5 font-medium transition-transform hover:-translate-y-1 hover:brightness-110">
           <i class="fa-solid fa-heart mr-2"></i>Amistad
+        </a>
+
+        <a href="arte.html" data-reveal="up" data-delay="850" class="rounded-full bg-wood px-5 py-2.5 font-medium transition-transform hover:-translate-y-1 hover:brightness-110">
+          <i class="fa-solid fa-palette mr-2"></i>Arte
+        </a>
+
+        <a href="musica.html" data-reveal="up" data-delay="950" class="rounded-full bg-river px-5 py-2.5 font-medium transition-transform hover:-translate-y-1 hover:brightness-110">
+          <i class="fa-solid fa-music mr-2"></i>Musica
         </a>
       </div>
  
@@ -102,7 +112,7 @@
       <div class="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div data-reveal="scale" class="rounded-[2rem] bg-lime p-7">
           <i class="fa-solid fa-hand-holding-heart text-3xl" aria-hidden="true"></i>
-          <h3 class="mt-10 text-2xl font-bold">Cuidar</h3>
+          <h3 class="mt-10 text-2xl font-bold">Valorar</h3>
           <p class="mt-2 text-sm leading-relaxed">A uno mismo, a los demás, a los animales y al entorno.</p>
         </div>
         <div data-reveal="scale" data-delay="120" class="rounded-[2rem] bg-sun p-7">
@@ -243,7 +253,11 @@
             </a>
           </div>
         </div>
- 
+        <div class="mt-4 grid gap-4 md:grid-cols-4">
+          <div data-reveal="up" data-delay="360" class="col-span-full rounded-[2rem] bg-moss p-7 text-center">
+            <p class="leading-relaxed text-cream/75">En caso de ser necesario y llegado a un cupo. Contamos con la probabilidad de sumar un transporte para todos aquellos niños/a que necesiten movilidad desde Santa Fe.</p>
+          </div>
+        </div>
         <div class="mt-16 grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
             <h3 data-reveal="up" class="text-2xl font-bold">Modalidades de asistencia</h3>
@@ -256,7 +270,7 @@
               <div data-reveal="scale" data-delay="150" class="rounded-[2rem] bg-lake p-7 text-forest">
                 <p class="text-4xl font-extrabold tracking-tighter">2 días</p>
                 <h4 class="mt-6 font-bold">Días fijos</h4>
-                <p class="mt-1 text-sm">Lunes y miércoles, o martes y jueves.</p>
+                <p class="mt-1 text-sm">Martes y Jueves.</p>
               </div>
             </div>
             <p data-reveal="up" class="mt-6 leading-relaxed text-cream/75">Edades: de 2 años y medio a 17 años. El ingreso se realiza por cupos, con un período de adaptación y posterior confirmación de los grupos.</p>
