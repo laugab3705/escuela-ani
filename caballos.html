@@ -50,11 +50,43 @@
       <p class="text-lg leading-relaxed text-forest/80">A través del contacto directo y diario con nuestra manada equina, los niños y adolescentes trabajan su seguridad personal y aprenden a gestionar sus emociones. El caballo actúa como un espejo de sus propios sentimientos, enseñándoles sobre la paciencia, la suavidad y el amor incondicional en un entorno seguro y contenido.</p>
     </div>
 
-    <!-- Espacio para imagen -->
-    <div data-reveal="scale" class="w-full h-64 sm:h-96 rounded-3xl bg-forest/5 border-2 border-dashed border-forest/20 flex flex-col items-center justify-center text-forest/40 mb-14 overflow-hidden relative">
-      <i class="fa-regular fa-image text-4xl mb-2"></i>
-      <p class="text-sm font-medium">Reemplazá este contenedor con tu etiqueta &lt;img&gt;</p>
+    <!-- Carrusel 3D Coverflow -->
+<div data-reveal="up" class="relative w-full h-64 sm:h-80 md:h-96 flex items-center justify-center mb-14 overflow-hidden">
+  
+  <!-- Contenedor de las tarjetas -->
+  <div id="coverflow-container" class="relative w-full h-full flex items-center justify-center">
+
+    <!-- Slide 1 -->
+    <div class="slide absolute w-[55%] sm:w-[40%] md:w-[35%] h-[90%] rounded-3xl overflow-hidden transition-all duration-500 ease-out cursor-pointer shadow-xl border-4">
+      <img src="https://images.unsplash.com/photo-1596422846543-7cecdb9a224a?auto=format&fit=crop&q=80&w=800" alt="Foto 1" class="w-full h-full object-cover">
     </div>
+    <!-- Slide 2 -->
+    <div class="slide absolute w-[55%] sm:w-[40%] md:w-[35%] h-[90%] rounded-3xl overflow-hidden transition-all duration-500 ease-out cursor-pointer shadow-xl border-4">
+      <img src="https://images.unsplash.com/photo-1504608524841-42fe6f0f5e0b?auto=format&fit=crop&q=80&w=800" alt="Foto 2" class="w-full h-full object-cover">
+    </div>
+    <!-- Slide 3 (Inicia en el centro) -->
+    <div class="slide absolute w-[55%] sm:w-[40%] md:w-[35%] h-[90%] rounded-3xl overflow-hidden transition-all duration-500 ease-out cursor-pointer shadow-xl border-4">
+      <img src="https://images.unsplash.com/photo-1518991669955-9c7e78ec80ca?auto=format&fit=crop&q=80&w=800" alt="Foto 3" class="w-full h-full object-cover">
+    </div>
+    <!-- Slide 4 -->
+    <div class="slide absolute w-[55%] sm:w-[40%] md:w-[35%] h-[90%] rounded-3xl overflow-hidden transition-all duration-500 ease-out cursor-pointer shadow-xl border-4">
+      <img src="https://images.unsplash.com/photo-1425082661705-1834bfd0999c?auto=format&fit=crop&q=80&w=800" alt="Foto 4" class="w-full h-full object-cover">
+    </div>
+    <!-- Slide 5 -->
+    <div class="slide absolute w-[55%] sm:w-[40%] md:w-[35%] h-[90%] rounded-3xl overflow-hidden transition-all duration-500 ease-out cursor-pointer shadow-xl border-4">
+      <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=800" alt="Foto 5" class="w-full h-full object-cover">
+    </div>
+
+  </div>
+
+  <!-- Botones laterales -->
+  <button id="btn-prev" class="absolute left-2 md:left-8 z-40 flex h-10 w-10 items-center justify-center rounded-full bg-forest/80 text-cream backdrop-blur-md transition-all hover:bg-forest hover:scale-110">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <button id="btn-next" class="absolute right-2 md:right-8 z-40 flex h-10 w-10 items-center justify-center rounded-full bg-forest/80 text-cream backdrop-blur-md transition-all hover:bg-forest hover:scale-110">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+</div>
 
     <!-- Bloque de lista / destacados -->
     <div data-reveal="up" class="bg-white rounded-3xl p-8 sm:p-10 shadow-sm border border-forest/5">
@@ -97,5 +129,94 @@
       els.forEach(function (el) { io.observe(el); });
     })();
   </script>
+
+  <script>
+  (function initCoverflow() {
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const container = document.getElementById('coverflow-container');
+    if (slides.length === 0) return;
+
+    let currentIndex = Math.floor(slides.length / 2);
+    let autoplayTimer; // Variable para controlar el tiempo
+
+    function updateCarousel() {
+      slides.forEach((slide, index) => {
+        slide.className = "slide absolute w-[55%] sm:w-[40%] md:w-[35%] h-[90%] rounded-3xl overflow-hidden transition-all duration-500 ease-out cursor-pointer shadow-xl border-4";
+        
+        let diff = index - currentIndex;
+
+        if (diff < -Math.floor(slides.length / 2)) diff += slides.length;
+        if (diff > Math.floor(slides.length / 2)) diff -= slides.length;
+
+        if (diff === 0) {
+          slide.classList.add('z-30', 'scale-100', 'translate-x-0', 'opacity-100', 'grayscale-0', 'border-sun');
+        } else if (diff === -1) {
+          slide.classList.add('z-20', 'scale-75', '-translate-x-[65%]', 'opacity-80', 'grayscale', 'border-transparent');
+        } else if (diff === 1) {
+          slide.classList.add('z-20', 'scale-75', 'translate-x-[65%]', 'opacity-80', 'grayscale', 'border-transparent');
+        } else if (diff === -2) {
+          slide.classList.add('z-10', 'scale-50', '-translate-x-[120%]', 'opacity-40', 'grayscale', 'border-transparent');
+        } else if (diff === 2) {
+          slide.classList.add('z-10', 'scale-50', 'translate-x-[120%]', 'opacity-40', 'grayscale', 'border-transparent');
+        } else {
+          slide.classList.add('z-0', 'scale-0', 'opacity-0', 'border-transparent');
+        }
+      });
+    }
+
+    // Funciones de movimiento
+    function nextSlide() {
+      currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+      updateCarousel();
+    }
+
+    // Lógica del Autoplay
+    function startAutoplay() {
+      // Cambia de foto cada 3 segundos (3000 milisegundos). Podés cambiar este número.
+      autoplayTimer = setInterval(nextSlide, 3000); 
+    }
+
+    function resetAutoplay() {
+      clearInterval(autoplayTimer);
+      startAutoplay();
+    }
+
+    // Eventos de clic
+    slides.forEach((slide, i) => {
+      slide.addEventListener('click', () => {
+        if (currentIndex !== i) {
+          currentIndex = i;
+          updateCarousel();
+          resetAutoplay();
+        }
+      });
+    });
+
+    btnPrev.addEventListener('click', () => {
+      prevSlide();
+      resetAutoplay();
+    });
+
+    btnNext.addEventListener('click', () => {
+      nextSlide();
+      resetAutoplay();
+    });
+
+    // Pausar el autoplay si el mouse está encima
+    container.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
+    container.addEventListener('mouseleave', startAutoplay);
+
+    // Iniciar el carrusel y el movimiento automático
+    updateCarousel();
+    startAutoplay();
+  })();
+</script>
 </body>
 </html>
