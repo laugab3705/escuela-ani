@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Valores - Escuelita de Campo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            forest: '#12261C',
+            moss: '#1F4030',
+            fern: '#4F8F5B',
+            lime: '#CFE86B',
+            cream: '#F6F1E7',
+            sun: '#F2B33D',
+            clay: '#C8754B',
+            lake: '#7DB4C4',
+            wood: '#B37055', /* Actualizado para mejor contraste */
+            river: '#4A8DB7' /* Actualizado para mejor contraste */
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans bg-cream text-forest antialiased overflow-x-hidden">
+
+  <!-- Botón simple para volver atrás (Alineado a la izquierda) -->
+  <a href="index.html" onclick="window.history.back(); return false;" class="fixed top-5 left-5 sm:left-8 z-50 inline-flex items-center gap-2 rounded-full bg-forest/80 px-6 py-2.5 text-sm font-medium text-cream backdrop-blur-xl ring-1 ring-white/10 transition-all hover:bg-forest hover:scale-105 shadow-md">
+    <i class="fa-solid fa-arrow-left"></i> Volver
+  </a>
+
+  <!-- Cabecera Minimalista -->
+  <header class="pt-32 pb-12 text-center px-6">
+    <h1 data-reveal="up" class="text-4xl md:text-6xl font-extrabold tracking-tight text-forest">Valores del encuentro</h1>
+    <div data-reveal="up" data-delay="100" class="mt-6 mx-auto w-24 h-1.5 bg-lime rounded-full"></div>
+  </header>
+
+  <main class="mx-auto max-w-4xl px-6 pb-24">
+    
+    <!-- 1. Valor de Inscripción -->
+    <div data-reveal="up" data-delay="200" class="bg-forest text-cream rounded-[2rem] p-8 md:p-10 text-center shadow-lg mb-12">
+      <h2 class="text-sm font-bold tracking-widest text-lime uppercase mb-2">Valor de la inscripción anual</h2>
+      <p class="text-5xl md:text-6xl font-extrabold mb-4">$80.000</p>
+      <p class="text-cream/80 max-w-lg mx-auto">Estos fondos serán destinados exclusivamente a la compra de materiales de uso compartido, la remera oficial del grupo y un gorro para cada participante.</p>
+    </div>
+
+    <!-- 2. Grilla de Mensualidades -->
+    <div class="grid gap-6 md:grid-cols-2 mb-12">
+      
+      <!-- Tarjeta: Primeros Exploradores -->
+      <div data-reveal="up" data-delay="300" class="flex flex-col bg-white rounded-[2rem] shadow-sm border border-forest/10 overflow-hidden">
+        <div class="bg-moss text-cream text-center py-6 px-4">
+          <h3 class="text-2xl font-bold">Primeros exploradores</h3>
+          <p class="text-sm text-lime mt-1 font-medium">De 2½ a 3 años</p>
+        </div>
+        <div class="p-8 flex flex-col gap-8 text-center flex-grow">
+          <!-- Opción 4 días -->
+          <div>
+            <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-fern/10 text-fern mb-3">
+              <i class="fa-regular fa-calendar-days text-xl"></i>
+            </div>
+            <p class="text-sm text-forest/60 font-medium mb-1">4 días por semana (Lunes a jueves)</p>
+            <p class="text-4xl font-extrabold text-forest">$495.000</p>
+          </div>
+          <!-- Separador -->
+          <hr class="border-forest/10">
+          <!-- Opción 2 días -->
+          <div>
+            <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-lake/10 text-lake mb-3">
+              <i class="fa-regular fa-clock text-xl"></i>
+            </div>
+            <p class="text-sm text-forest/60 font-medium mb-1">2 días por semana (Días fijos)</p>
+            <p class="text-4xl font-extrabold text-forest">$290.000</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Resto de los grupos -->
+      <div data-reveal="up" data-delay="400" class="flex flex-col bg-white rounded-[2rem] shadow-sm border border-forest/10 overflow-hidden">
+        <div class="bg-moss text-cream text-center py-6 px-4">
+          <h3 class="text-2xl font-bold">Resto de las manadas</h3>
+          <p class="text-sm text-lime mt-1 font-medium">De 4 a 17 años</p>
+        </div>
+        <div class="p-8 flex flex-col gap-8 text-center flex-grow">
+          <!-- Opción 4 días -->
+          <div>
+            <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-fern/10 text-fern mb-3">
+              <i class="fa-regular fa-calendar-days text-xl"></i>
+            </div>
+            <p class="text-sm text-forest/60 font-medium mb-1">4 días por semana (Lunes a jueves)</p>
+            <p class="text-4xl font-extrabold text-forest">$470.000</p>
+          </div>
+          <!-- Separador -->
+          <hr class="border-forest/10">
+          <!-- Opción 2 días -->
+          <div>
+            <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-lake/10 text-lake mb-3">
+              <i class="fa-regular fa-clock text-xl"></i>
+            </div>
+            <p class="text-sm text-forest/60 font-medium mb-1">2 días por semana (Días fijos)</p>
+            <p class="text-4xl font-extrabold text-forest">$270.000</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Aclaración de mantenimiento de precio -->
+    <div data-reveal="up" class="mb-12 flex justify-center px-4">
+      <div class="inline-flex flex-col sm:flex-row items-center gap-3 rounded-2xl sm:rounded-full bg-forest/5 border border-forest/10 px-6 py-3 text-sm sm:text-base font-medium text-forest/80 text-center sm:text-left shadow-sm">
+        <i class="fa-solid fa-lock text-forest/50 text-lg"></i>
+        <p>Al adquirir la promoción, este monto mensual se mantendrá fijo hasta que termine la temporada (fines de febrero).</p>
+      </div>
+    </div>
+    <!-- 3. Qué incluye el valor mensual -->
+    <div data-reveal="up" class="bg-lime text-forest rounded-[2rem] p-8 md:p-10 mb-12 shadow-sm">
+      <h3 class="text-xl font-bold mb-6 text-center uppercase tracking-wide">¿Qué contempla el valor mensual?</h3>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="flex items-start gap-3">
+          <i class="fa-solid fa-mug-hot mt-1 text-forest/60"></i>
+          <p class="font-medium">Meriendas diarias nutritivas.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <i class="fa-solid fa-user-graduate mt-1 text-forest/60"></i>
+          <p class="font-medium">Personal docente capacitado e instructores especializados.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <i class="fa-solid fa-life-ring mt-1 text-forest/60"></i>
+          <p class="font-medium">Guardavidas profesional para todas las actividades acuáticas.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <i class="fa-solid fa-horse mt-1 text-forest/60"></i>
+          <p class="font-medium">Acceso a todas las actividades deportivas, de granja y con caballos.</p>
+        </div>
+        <div class="flex items-start gap-3 sm:col-span-2 sm:justify-center mt-2">
+          <i class="fa-solid fa-shield-halved mt-1 text-forest/60"></i>
+          <p class="font-medium">Seguro médico completo para cada niño/a durante la jornada.</p>
+        </div>
+      </div>
+    </div>
+<template>
+    <!-- 4. Transporte Opcional -->
+    <div data-reveal="up" class="flex flex-col items-center gap-5 rounded-[2rem] bg-lake/20 border border-lake/30 p-8 sm:flex-row sm:items-start mb-12">
+      <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-lake text-cream shadow-md" aria-hidden="true">
+        <i class="fa-solid fa-van-shuttle text-2xl"></i>
+      </div>
+      <div class="text-center sm:text-left mt-1 text-forest">
+        <h3 class="mb-2 text-xl font-bold">Transporte opcional</h3>
+        <p class="leading-relaxed text-forest/80">Pensando en facilitar el acceso a nuestra escuelita, contemplamos la posibilidad de incorporar un servicio de transporte desde la ciudad de Santa Fe hasta Solares de la Laguna.<br><br>Este servicio estará sujeto a la cantidad de familias interesadas y a la conformación de un grupo mínimo de alumnos que requieran traslado. Si necesitan transporte, les pedimos que lo indiquen en el formulario de inscripción para poder organizar esta alternativa.</p>
+      </div>
+    </div>
+</template>
+    <!-- 5. Caja de Inscripciones (Bg Wood) -->
+    <div data-reveal="up" class="rounded-[2rem] bg-wood p-8 sm:p-10 text-cream shadow-md">
+      <h3 class="mb-6 text-2xl font-bold flex items-center justify-center sm:justify-start">
+        <i class="fa-solid fa-clipboard-list mr-3 text-cream/80"></i>
+        Inscripciones
+      </h3>
+      <p class="leading-relaxed text-cream/90 text-lg text-center sm:text-left">
+        Para solicitar la inscripción, las familias deberán completar el formulario que se encuentra a continuación.<br><br>
+        Una vez recibida la solicitud, nuestro equipo evaluará la disponibilidad de cupos según la edad, el grupo y la modalidad de asistencia elegida.<br><br>
+        Nos comunicaremos personalmente con cada familia para informarles sobre la disponibilidad y acompañarlas en los próximos pasos del proceso de inscripción.
+      </p>
+      <!-- Botón al formulario (Podés poner el link de Google Forms acá) -->
+      <div class="mt-8 text-center sm:text-left">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd9tMP1vbJScfnb4vdSPI_QW5hivIYccFv633QWmki2fH7BLg/viewform?usp=dialog" target="_blank" class="inline-flex items-center gap-2 rounded-full bg-cream px-8 py-4 font-bold text-wood transition-transform hover:-translate-y-1 hover:shadow-lg">
+          Completar Formulario <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Script de animaciones Reveal -->
+  <script>
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('[data-reveal]');
+      if (reduce || !('IntersectionObserver' in window)) return;
+      var hidden = {
+        up: ['opacity-0', 'translate-y-10'],
+        scale: ['opacity-0', 'scale-90']
+      };
+      var base = ['transition-all', 'duration-700', 'ease-out'];
+      els.forEach(function (el) {
+        el.classList.add.apply(el.classList, base.concat(hidden[el.dataset.reveal] || hidden.up));
+        el.style.transitionDelay = (el.dataset.delay || 0) + 'ms';
+      });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          var el = e.target;
+          el.classList.remove.apply(el.classList, hidden[el.dataset.reveal] || hidden.up);
+          io.unobserve(el);
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
