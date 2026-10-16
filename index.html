@@ -35,22 +35,27 @@
   <meta property="og:image" content="https://laugab3705.github.io/escuela-de-campo/portada.png">
 
   <!-- Etiquetas complementarias para asegurar la lectura correcta del título y la descripción -->
-  
   <meta property="og:description" content="Un proyecto que nace del amor">
   <meta property="og:type" content="website">
 </head>
 <body class="font-sans bg-cream text-forest antialiased overflow-x-hidden">
- 
   <!-- Barra de progreso -->
   <div class="fixed top-0 left-0 z-50 h-1 w-full bg-transparent"><div id="progress" class="h-full w-0 bg-lime"></div></div>
  
   <!-- Navegación -->
-  <nav class="fixed top-4 left-1/2 z-40 -translate-x-1/2 w-[calc(100%-2rem)] max-w-xl" aria-label="Principal">
-    <ul class="flex items-center justify-between gap-1 rounded-full bg-forest/70 px-3 py-2 text-xs sm:text-sm font-medium text-cream backdrop-blur-xl ring-1 ring-white/10">
-      <li><a href="#propuesta" class="block rounded-full px-3 py-2 hover:bg-white/10">Propuesta</a></li>
-      <li><a href="#actividades" class="block rounded-full px-3 py-2 hover:bg-white/10">Actividades</a></li>
-      <li><a href="#manadas" class="block rounded-full px-3 py-2 hover:bg-white/10">Manadas</a></li>
-      <li><a href="#informacion" class="block rounded-full bg-lime px-3 py-2 text-forest">Info</a></li>
+  <nav class="fixed top-4 left-1/2 z-40 -translate-x-1/2 w-[calc(100%-1.5rem)] max-w-xl" aria-label="Principal">
+    <ul class="flex items-center justify-between gap-1 rounded-full bg-forest/75 px-3 py-2 text-xs sm:text-sm font-medium text-cream backdrop-blur-xl ring-1 ring-white/10">
+      <li><a href="#propuesta" class="block rounded-full px-2.5 py-1.5 sm:px-3 sm:py-2 hover:bg-white/10 transition-colors">Propuesta</a></li>
+      <li><a href="#actividades" class="block rounded-full px-2.5 py-1.5 sm:px-3 sm:py-2 hover:bg-white/10 transition-colors">Actividades</a></li>
+      <li><a href="#manadas" class="block rounded-full px-2.5 py-1.5 sm:px-3 sm:py-2 hover:bg-white/10 transition-colors">Manadas</a></li>
+      <li><a href="#informacion" class="block rounded-full px-2.5 py-1.5 sm:px-3 sm:py-2 hover:bg-white/10 transition-colors">Info</a></li>
+      
+      <!-- Botón que baja directo -->
+      <li>
+        <a href="#contacto" class="block rounded-full bg-lime px-3 py-1.5 sm:px-4 sm:py-2 font-semibold text-forest shadow-sm transition-transform hover:scale-105">
+          Inscripción
+        </a>
+      </li>
     </ul>
   </nav>
  
@@ -61,9 +66,22 @@
     <div class="absolute top-1/3 right-8 -z-10 hidden h-64 w-64 rounded-full bg-lime/20 blur-2xl md:block" aria-hidden="true"></div>
  
     <div class="mx-auto w-full max-w-6xl px-6 pt-28 pb-20">
-      <div data-reveal="up" class="inline-flex items-center gap-3 rounded-full bg-white/10 py-2 pr-5 pl-2 text-sm backdrop-blur ring-1 ring-white/15">
-        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-lime text-forest"><i class="fa-solid fa-calendar-day text-xs" aria-hidden="true"></i></span>
-        Abrimos el lunes 16 de noviembre de 2026
+      <div data-reveal="up" class="flex flex-wrap items-center gap-3">
+        <!-- Fecha de apertura -->
+        <div class="inline-flex items-center gap-3 rounded-full bg-white/10 py-2 pr-5 pl-2 text-sm backdrop-blur ring-1 ring-white/15">
+          <span class="flex h-8 w-8 items-center justify-center rounded-full bg-lime text-forest">
+            <i class="fa-solid fa-calendar-day text-xs" aria-hidden="true"></i>
+          </span>
+          Abrimos el 16 de noviembre
+        </div>
+
+        <!-- Pastilla rápida de Horario -->
+        <div class="inline-flex items-center gap-3 rounded-full bg-white/10 py-2 pr-5 pl-2 text-sm backdrop-blur ring-1 ring-white/15">
+          <span class="flex h-8 w-8 items-center justify-center rounded-full bg-sun text-forest">
+            <i class="fa-solid fa-clock text-xs" aria-hidden="true"></i>
+          </span>
+          Lun. a Jue. · 16:00 a 20:00 hs
+        </div>
       </div>
  
       <h1 data-reveal="up" data-delay="150" class="mt-8 text-[clamp(3.2rem,12vw,9rem)] font-extrabold leading-[0.95] tracking-tighter">Escuelita<br>de Campo</h1>
@@ -285,12 +303,12 @@
               <div data-reveal="scale" class="rounded-[2rem] bg-sun p-7 text-forest">
                 <p class="text-4xl font-extrabold tracking-tighter">4 días</p>
                 <h4 class="mt-6 font-bold">Completa</h4>
-                <p class="mt-1 text-sm">4 días semanales, de lunes a jueves.</p>
+                <p class="mt-1 text-sm">4 días semanales · Lunes a jueves de 16:00 a 20:00 hs.</p>
               </div>
               <div data-reveal="scale" data-delay="150" class="rounded-[2rem] bg-lake p-7 text-forest">
                 <p class="text-4xl font-extrabold tracking-tighter">2 días</p>
                 <h4 class="mt-6 font-bold">Días fijos</h4>
-                <p class="mt-1 text-sm">Martes y Jueves.</p>
+                <p class="mt-1 text-sm">Martes y Jueves de 16:00 a 20:00 hs.</p>
               </div>
             </div>
             <div data-reveal="up" class="mt-14 rounded-[2rem] bg-clay p-8 sm:p-10 text-black/80 shadow-md">
@@ -349,7 +367,7 @@
   </main>
  
   <!-- Footer -->
-  <footer class="bg-lime text-forest">
+  <footer id="contacto" class="bg-lime text-forest">
     <div class="mx-auto max-w-6xl px-6 py-24 text-center sm:py-32">
       <p data-reveal="up" class="text-4xl font-extrabold tracking-tighter sm:text-7xl">Escuelita de Campo</p>
       <p data-reveal="up" data-delay="100" class="mt-4 font-medium">Naturaleza, Caballos, Deporte, Agua, Amistad</p>
@@ -371,7 +389,54 @@
       <p class="mt-16 text-xs text-forest/60">Un proyecto que nace del amor · Solares de la Laguna</p>
     </div>
   </footer>
- 
+  <!-- Widget Flotante Horario y Apertura -->
+  <div id="quick-info-widget" class="fixed bottom-6 left-6 z-40 transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
+    
+    <!-- Pop-up desplegable -->
+    <div id="quick-info-card" class="mb-3 hidden w-72 rounded-3xl bg-forest/95 p-5 text-cream backdrop-blur-xl ring-1 ring-white/15 shadow-2xl transition-all duration-300 transform origin-bottom-left scale-95 opacity-0">
+      <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/10">
+        <span class="text-xs font-bold uppercase tracking-wider text-lime">Datos Clave</span>
+        <button id="quick-info-close" class="text-cream/60 hover:text-cream text-sm px-1">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Apertura -->
+      <div class="flex items-start gap-3 mb-3">
+        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-lime text-forest mt-0.5">
+          <i class="fa-solid fa-calendar-day text-xs"></i>
+        </span>
+        <div>
+          <p class="text-xs text-cream/70">Apertura</p>
+          <p class="text-sm font-bold text-cream">16 de noviembre</p>
+        </div>
+      </div>
+
+      <!-- Horarios -->
+      <div class="flex items-start gap-3">
+        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-sun text-forest mt-0.5">
+          <i class="fa-solid fa-clock text-xs"></i>
+        </span>
+        <div>
+          <p class="text-xs text-cream/70">Horario de jornada</p>
+          <p class="text-sm font-bold text-cream">16:00 a 20:00 hs</p>
+          <p class="text-[11px] text-cream/60">Lunes a jueves</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botoncito chiquito flotante -->
+    <button id="quick-info-btn" aria-label="Ver datos clave de la escuela" class="flex items-center gap-2 rounded-full bg-forest/85 px-3.5 py-2 text-xs font-semibold text-cream backdrop-blur-xl ring-1 ring-white/15 shadow-lg transition-all hover:bg-forest hover:scale-105 active:scale-95">
+      
+      <!-- ÍCONO CAMBIADO: fa-circle-info en vez de fa-clock -->
+      <span class="flex h-6 w-6 items-center justify-center rounded-full bg-lime text-forest">
+        <i class="fa-solid fa-circle-info text-[11px]"></i>
+      </span>
+      
+      <span class="hidden sm:inline">Datos clave</span>
+      <i id="quick-info-icon" class="fa-solid fa-chevron-up text-[10px] text-cream/70 transition-transform"></i>
+    </button>
+  </div>
   <script>
     // Aparición al hacer scroll (se respeta "reducir movimiento")
     (function () {
@@ -449,6 +514,79 @@
           
         });
       }
+    })();
+
+    (function initQuickInfoWidget() {
+      const widget = document.getElementById('quick-info-widget');
+      const btn = document.getElementById('quick-info-btn');
+      const card = document.getElementById('quick-info-card');
+      const closeBtn = document.getElementById('quick-info-close');
+      const chevron = document.getElementById('quick-info-icon');
+      
+      if (!widget || !btn || !card) return;
+
+      let isOpen = false;
+      let scrollTimeout;
+
+      function openCard() {
+        isOpen = true;
+        card.classList.remove('hidden');
+        requestAnimationFrame(() => {
+          card.classList.remove('scale-95', 'opacity-0');
+          card.classList.add('scale-100', 'opacity-100');
+        });
+        chevron.classList.add('rotate-180');
+      }
+
+      function closeCard() {
+        isOpen = false;
+        card.classList.remove('scale-100', 'opacity-100');
+        card.classList.add('scale-95', 'opacity-0');
+        setTimeout(() => {
+          if (!isOpen) card.classList.add('hidden');
+        }, 300);
+        chevron.classList.remove('rotate-180');
+      }
+
+      // Toggle al hacer clic en el botón
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        isOpen ? closeCard() : openCard();
+      });
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          closeCard();
+        });
+      }
+
+      // Cerrar al hacer clic en cualquier otra parte
+      document.addEventListener('click', (e) => {
+        if (isOpen && !card.contains(e.target) && !btn.contains(e.target)) {
+          closeCard();
+        }
+      });
+
+      // Mostrar el botón solo al bajar más de 350px y auto-cerrar si scrollean
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 350) {
+          widget.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+          widget.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        } else {
+          widget.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+          widget.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+          if (isOpen) closeCard();
+        }
+
+        // Auto-achicar el recuadro cuando el usuario sigue haciendo scroll
+        if (isOpen) {
+          clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(() => {
+            closeCard();
+          }, 100);
+        }
+      }, { passive: true });
     })();
   </script>
 </body>
