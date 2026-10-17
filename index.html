@@ -208,10 +208,20 @@
             <h3 class="mt-8 text-2xl font-bold">Creatividad y educación emocional</h3>
             <ul class="mt-5 space-y-3 text-sm leading-relaxed "><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Actividades orientadas al arte y la expresión creativa.</span></li><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Espacios de educación emocional: cuidado de uno mismo y fomento de la autonomía.</span></li></ul>
           </article>
-          <article data-reveal="scale" class="rounded-[2rem] bg-cream p-8 text-forest md:col-span-6">
-            <i class="fa-solid fa-mug-hot text-4xl" aria-hidden="true"></i>
-            <h3 class="mt-8 text-2xl font-bold">Encuentro, socialización y convivencia</h3>
-            <ul class="mt-5 space-y-3 text-sm leading-relaxed "><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Todos los días compartimos el momento de la merienda.</span></li><li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Instancias pensadas para practicar la escucha, la cooperación, forjar amistades y afianzar el sentido de pertenencia al grupo.</span></li></ul>
+          <article data-reveal="scale" class="rounded-[2rem] bg-cream p-8 text-forest md:col-span-6 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div>
+              <i class="fa-solid fa-mug-hot text-4xl" aria-hidden="true"></i>
+              <h3 class="mt-8 text-2xl font-bold">Encuentro, socialización y convivencia</h3>
+              <ul class="mt-5 space-y-3 text-sm leading-relaxed">
+                <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Todos los días compartimos el momento de la merienda.</span></li>
+                <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-xs" aria-hidden="true"></i><span>Instancias pensadas para practicar la escucha, la cooperación, forjar amistades y afianzar el sentido de pertenencia al grupo.</span></li>
+              </ul>
+            </div>
+
+            <!-- Botón hacia la organización y cronograma -->
+            <a href="organizacion.html" class="inline-flex shrink-0 items-center gap-2 rounded-full bg-forest px-6 py-3.5 text-sm font-semibold text-cream transition-all hover:bg-moss hover:scale-105 shadow-md">
+              <i class="fa-solid fa-calendar-days text-lime"></i> Ver organización de la jornada <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
           </article>
         </div>
       </div>
@@ -262,34 +272,37 @@
     <section id="informacion" class="rounded-t-[2.5rem] bg-forest py-24 text-cream sm:rounded-t-[4rem] sm:py-36">
       <div class="mx-auto max-w-6xl px-6">
         <h2 data-reveal="up" class="text-3xl font-bold leading-tight tracking-tight sm:text-5xl">Información útil</h2>
- 
+
+        <!-- Fila 1: Apertura, Horario y Ubicación -->
         <div class="mt-14 grid gap-4 md:grid-cols-4">
+          <!-- Fecha de apertura (2 columnas, color verde lima) -->
           <div data-reveal="up" class="rounded-[2rem] bg-lime p-7 text-forest md:col-span-2">
             <i class="fa-solid fa-calendar-day text-3xl" aria-hidden="true"></i>
             <h3 class="mt-10 text-sm font-medium">Fecha de apertura</h3>
             <p class="text-3xl font-extrabold tracking-tight sm:text-4xl">Lunes 16 de noviembre de 2026</p>
           </div>
+
+          <!-- Horario (1 columna, fondo oscuro translúcido) -->
           <div data-reveal="up" data-delay="120" class="rounded-[2rem] bg-white/10 p-7">
             <i class="fa-solid fa-clock text-3xl text-sun" aria-hidden="true"></i>
             <h3 class="mt-10 text-sm font-medium text-cream/70">Horario</h3>
             <p class="text-xl font-bold">Lunes a jueves, de 16:00 a 20:00</p>
           </div>
+
+          <!-- Ubicación (1 columna, con botón Ver en mapa) -->
           <div data-reveal="up" data-delay="240" class="flex flex-col items-start rounded-[2rem] bg-white/10 p-7">
             <i class="fa-solid fa-location-dot text-3xl text-sun" aria-hidden="true"></i>
             <h3 class="mt-10 text-sm font-medium text-cream/70">Ubicación</h3>
             <p class="text-xl font-bold">Solares de la Laguna</p>
-            
-            <!-- Botón de Google Maps -->
-            <a href="https://www.google.com/maps/search/?api=1&query=Solares+de+la+Laguna,+Santa+Fe" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 rounded-full border border-sun/50 bg-sun/10 px-4 py-2 text-sm font-semibold text-sun transition-colors hover:bg-sun hover:text-forest">
+            <a href="https://www.google.com/maps/search/?api=1&query=Solares+de+la+Laguna,+Santa+Fe" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 rounded-full border border-sun/40 bg-sun/10 px-4 py-2 text-xs font-semibold text-sun hover:bg-sun/20 transition-all">
               <i class="fa-solid fa-map-location-dot"></i> Ver en mapa
             </a>
           </div>
         </div>
-        <!-- Fila asimétrica y balanceada: Transporte y Días de lluvia -->
-        <div data-reveal="up" data-delay="360" class="col-span-full mt-8 grid gap-6 md:grid-cols-12 items-stretch">
 
-          <!-- 1. Transporte opcional (más ancho: 7 columnas) -->
-          <div class="md:col-span-6 flex flex-col sm:flex-row items-start gap-4 rounded-[2rem] bg-white/10 p-7 sm:p-8 border border-white/10">
+        <!-- Fila 2: Transporte y Días de lluvia -->
+        <div data-reveal="up" data-delay="300" class="mt-8 grid gap-6 md:grid-cols-12 items-stretch">
+          <div class="md:col-span-7 flex flex-col sm:flex-row items-start gap-4 rounded-[2rem] bg-white/10 p-7 sm:p-8 border border-white/10">
             <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sun/20 text-sun shadow-[0_0_15px_rgba(242,179,61,0.15)]" aria-hidden="true">
               <i class="fa-solid fa-van-shuttle text-xl"></i>
             </div>
@@ -300,13 +313,13 @@
                   Pensando en facilitar el acceso a nuestra escuelita, contemplamos la posibilidad de incorporar un servicio de transporte desde la ciudad de Santa Fe hasta Solares de la Laguna.<br><br>
                   Este servicio estará sujeto a la cantidad de familias interesadas y a la conformación de un grupo mínimo de alumnos que requieran traslado.<br><br>
                   Por eso, si necesitan transporte, les pedimos que lo indiquen en el formulario de inscripción. Esto nos permitirá evaluar la demanda y organizar una alternativa de traslado.<br><br>
+                  <strong class="text-cream">Aclaración:</strong> El servicio de transporte será coordinado y gestionado por la escuela pero contará con un costo adicional.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- 2. Días de lluvia (5 columnas, contenido equilibrado verticalmente) -->
-          <div class="md:col-span-6 flex flex-col sm:flex-row items-start gap-4 rounded-[2rem] bg-white/10 p-7 sm:p-8 border border-white/10">
+          <div class="md:col-span-5 flex flex-col sm:flex-row items-start gap-4 rounded-[2rem] bg-white/10 p-7 sm:p-8 border border-white/10">
             <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-lake/20 text-lake shadow-[0_0_15px_rgba(125,180,196,0.15)]" aria-hidden="true">
               <i class="fa-solid fa-cloud-showers-heavy text-xl"></i>
             </div>
@@ -320,75 +333,103 @@
               </div>
             </div>
           </div>
-
         </div>
 
-        </div>
-        <div class="mt-16 grid gap-10 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <h3 data-reveal="up" class="text-2xl font-bold">Modalidades de asistencia</h3>
-            <div class="mt-6 grid gap-4 sm:grid-cols-2">
-              <div data-reveal="scale" class="rounded-[2rem] bg-sun p-7 text-forest">
-                <p class="text-4xl font-extrabold tracking-tighter">4 días</p>
-                <h4 class="mt-6 font-bold">Completa</h4>
-                <p class="mt-1 text-sm">4 días semanales · Lunes a jueves de 16:00 a 20:00 hs.</p>
-              </div>
-              <div data-reveal="scale" data-delay="150" class="rounded-[2rem] bg-lake p-7 text-forest">
-                <p class="text-4xl font-extrabold tracking-tighter">2 días</p>
-                <h4 class="mt-6 font-bold">Días fijos</h4>
-                <p class="mt-1 text-sm">Martes y Jueves de 16:00 a 20:00 hs.</p>
+        <!-- Fila 3: 2 Columnas (Modalidades + Inscripción | Ciclo + Botón + Valores) -->
+        <div class="mt-16 grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
+          
+          <!-- Columna Izquierda -->
+          <div class="space-y-8">
+            <div>
+              <h3 data-reveal="up" class="text-2xl font-bold mb-6">Modalidades de asistencia</h3>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div data-reveal="scale" class="rounded-[2rem] bg-sun p-7 text-forest shadow-sm">
+                  <p class="text-4xl font-extrabold tracking-tighter">4 días</p>
+                  <h4 class="mt-6 font-bold text-lg">Completa</h4>
+                  <p class="mt-1 text-sm text-forest/80 leading-snug">4 días semanales · Lunes a jueves de 16:00 a 20:00 hs.</p>
+                </div>
+                <div data-reveal="scale" data-delay="150" class="rounded-[2rem] bg-lake p-7 text-forest shadow-sm">
+                  <p class="text-4xl font-extrabold tracking-tighter">2 días</p>
+                  <h4 class="mt-6 font-bold text-lg">Días fijos</h4>
+                  <p class="mt-1 text-sm text-forest/80 leading-snug">Martes y Jueves de 16:00 a 20:00 hs.</p>
+                </div>
               </div>
             </div>
-            <div data-reveal="up" class="mt-14 rounded-[2rem] bg-clay p-8 sm:p-10 text-black/80 shadow-md">
-              <!-- Título con ícono -->
-              <h3 class="mb-6 text-2xl font-bold flex items-center">
-                <i class="fa-solid fa-clipboard-list mr-3 text-black/80"></i>
+
+            <div id="inscripcion" data-reveal="up" data-delay="200" class="rounded-[2rem] bg-clay p-7 sm:p-8 text-cream shadow-md">
+              <h3 class="mb-4 text-xl font-bold flex items-center gap-3">
+                <i class="fa-solid fa-clipboard-list text-cream/80"></i>
                 Inscripciones
               </h3>
-              
-              <!-- Texto con los saltos de línea -->
-              <p class="leading-relaxed text-black/90 text-lg">
+              <p class="leading-relaxed text-cream/90 text-sm sm:text-base">
                 Para solicitar la inscripción, las familias deberán completar el formulario que se encuentra a continuación.<br><br>
-                
                 Una vez recibida la solicitud, nuestro equipo evaluará la disponibilidad de cupos según la edad, el grupo y la modalidad de asistencia elegida.<br><br>
-                
                 Nos comunicaremos personalmente con cada familia para informarles sobre la disponibilidad y acompañarlas en los próximos pasos del proceso de inscripción.
               </p>
             </div>
           </div>
- 
-          <div>
-            <h3 data-reveal="up" class="text-2xl font-bold">Ciclo anual</h3>
-            <ol class="mt-6 space-y-3">
-              <li data-reveal="right" class="flex gap-5 rounded-3xl bg-white/10 p-5"><span class="w-28 shrink-0 font-bold text-lime">Noviembre</span><span class="text-sm leading-relaxed">Inicio el 16, con 2 semanas de adaptación y conformación de manadas.</span></li>
-              <li data-reveal="right" data-delay="100" class="flex gap-5 rounded-3xl bg-white/10 p-5"><span class="w-28 shrink-0 font-bold text-lime">Dic. a feb.</span><span class="text-sm leading-relaxed">Temporada de verano.</span></li>
-              <li data-reveal="right" data-delay="200" class="flex gap-5 rounded-3xl bg-white/10 p-5"><span class="w-28 shrink-0 font-bold text-lime">Enero</span><span class="text-sm leading-relaxed">Presentación de la propuesta anual.</span></li>
-              <li data-reveal="right" data-delay="300" class="flex gap-5 rounded-3xl bg-white/10 p-5"><span class="w-28 shrink-0 font-bold text-lime">Desde marzo</span><span class="text-sm leading-relaxed">Inicio del nuevo ciclo y comunicación sobre la continuidad.</span></li>
-            </ol>
-            <!-- Banner de Valores y Promoción -->
-            <div data-reveal="up" data-delay="400" class="mt-8 rounded-3xl bg-lime/10 border border-lime/20 p-6 sm:p-8">
+
+          <!-- Columna Derecha -->
+          <div class="space-y-6">
+            <div>
+              <h3 data-reveal="up" class="text-2xl font-bold mb-6">Ciclo anual</h3>
+              <ol class="space-y-3">
+                <li data-reveal="right" class="flex gap-5 rounded-3xl bg-white/10 p-5 items-center">
+                  <span class="w-28 shrink-0 font-bold text-lime">Noviembre</span>
+                  <span class="text-sm leading-relaxed text-cream/85">Inicio el 16, con 2 semanas de adaptación y conformación de manadas.</span>
+                </li>
+                <li data-reveal="right" data-delay="100" class="flex gap-5 rounded-3xl bg-white/10 p-5 items-center">
+                  <span class="w-28 shrink-0 font-bold text-lime">Dic. a feb.</span>
+                  <span class="text-sm leading-relaxed text-cream/85">Temporada de verano.</span>
+                </li>
+                <li data-reveal="right" data-delay="200" class="flex gap-5 rounded-3xl bg-white/10 p-5 items-center">
+                  <span class="w-28 shrink-0 font-bold text-lime">Enero</span>
+                  <span class="text-sm leading-relaxed text-cream/85">Presentación de la propuesta anual.</span>
+                </li>
+                <li data-reveal="right" data-delay="300" class="flex gap-5 rounded-3xl bg-white/10 p-5 items-center">
+                  <span class="w-28 shrink-0 font-bold text-lime">Desde marzo</span>
+                  <span class="text-sm leading-relaxed text-cream/85">Inicio del nuevo ciclo y comunicación sobre la continuidad.</span>
+                </li>
+              </ol>
+            </div>
+
+            <!-- Botón a Organización -->
+            <div data-reveal="up" data-delay="350">
+              <a href="actividadesDetalladas.html" class="group flex items-center justify-between gap-4 rounded-2xl bg-white/10 border border-white/15 px-6 py-4 text-cream hover:bg-white/15 hover:border-lime/40 transition-all shadow-sm">
+                <div class="flex items-center gap-3">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-lime/20 text-lime">
+                    <i class="fa-solid fa-calendar-days text-base"></i>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-sm text-cream group-hover:text-lime transition-colors">Planificación y cronograma</h4>
+                    <p class="text-xs text-cream/70">Conocé la dinámica semanal y el día a día de las manadas</p>
+                  </div>
+                </div>
+                <i class="fa-solid fa-arrow-right text-xs text-cream/60 transition-transform group-hover:translate-x-1 group-hover:text-cream"></i>
+              </a>
+            </div>
+
+            <!-- Valores Promocionales -->
+            <div data-reveal="up" data-delay="400" class="rounded-3xl bg-lime/10 border border-lime/20 p-6 sm:p-7">
               <div class="flex items-start gap-4">
-                <!-- Ícono de etiqueta (tag) -->
                 <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-lime text-forest shadow-md" aria-hidden="true">
                   <i class="fa-solid fa-tag text-lg"></i>
                 </div>
-                
-                <!-- Textos y botón -->
-                <div>
-                  <h4 class="text-lg font-bold text-cream mb-2">Valores promocionales</h4>
+                <div class="flex-grow">
+                  <h4 class="text-lg font-bold text-cream mb-1">Valores promocionales</h4>
                   <p class="text-sm leading-relaxed text-cream/80 mb-5">
                     Conocé los costos de cada modalidad y qué incluyen. Estos precios son promocionales y se mantendrán vigentes hasta el <strong>1 de noviembre</strong>.
                   </p>
-                  
-                  <!-- Botón que redirige a valores.html -->
-                  <a href="valores.html" class="inline-flex items-center gap-2 rounded-full bg-lime px-6 py-3 text-sm font-bold text-forest transition-all hover:-translate-y-1 hover:shadow-[0_4px_15px_rgba(207,232,107,0.3)] hover:brightness-105">
+                  <a href="valores.html" class="inline-flex items-center gap-2 rounded-full bg-lime px-6 py-2.5 text-sm font-bold text-forest transition-all hover:-translate-y-0.5 hover:shadow-[0_4px_15px_rgba(207,232,107,0.3)] hover:brightness-105">
                     Ver valores <i class="fa-solid fa-arrow-right ml-1"></i>
                   </a>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
  
