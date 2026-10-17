@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Organización y Cronograma - Escuelita de Campo</title>
+  <meta name="description" content="Organización de las actividades y cronograma semanal de la Escuelita de Campo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            forest: '#12261C',
+            moss: '#1F4030',
+            fern: '#4F8F5B',
+            lime: '#CFE86B',
+            cream: '#F6F1E7',
+            sun: '#F2B33D',
+            clay: '#C8754B',
+            lake: '#7DB4C4',
+            wood: '#B37055',
+            river: '#4A8DB7'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans bg-cream text-forest antialiased overflow-x-hidden selection:bg-lime selection:text-forest">
+
+  <!-- Botón simple para volver atrás -->
+  <a href="index.html" onclick="window.history.back(); return false;" class="fixed top-5 left-5 sm:left-8 z-50 inline-flex items-center gap-2 rounded-full bg-forest/80 px-6 py-2.5 text-sm font-medium text-cream backdrop-blur-xl ring-1 ring-white/10 transition-all hover:bg-forest hover:scale-105 shadow-md">
+    <i class="fa-solid fa-arrow-left"></i> Volver
+  </a>
+
+  <!-- Cabecera -->
+  <header class="pt-32 pb-12 text-center px-6">
+    <div data-reveal="up" class="inline-flex items-center gap-2 rounded-full bg-forest/5 border border-forest/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-forest/70 mb-4">
+      <i class="fa-solid fa-calendar-check text-fern"></i> Planificación y Dinámica
+    </div>
+    <h1 data-reveal="up" data-delay="100" class="text-4xl md:text-6xl font-extrabold tracking-tight text-forest">
+      Organización de las actividades
+    </h1>
+    <div data-reveal="up" data-delay="200" class="mt-6 mx-auto w-24 h-1.5 bg-lime rounded-full"></div>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-6 pb-24">
+
+    <!-- Sección 1: Puntos de Organización (Imagen 1) -->
+    <section class="grid gap-6 md:grid-cols-2 mb-20">
+      
+      <!-- Punto 1 -->
+      <article data-reveal="up" class="rounded-[2rem] bg-white p-7 shadow-sm border border-forest/5 flex items-start gap-4">
+        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-fern/15 text-fern mt-1">
+          <i class="fa-solid fa-seedling text-lg"></i>
+        </span>
+        <p class="text-sm sm:text-base leading-relaxed text-forest/80">
+          Nuestra propuesta está pensada para que todos los niños, niñas y adolescentes puedan disfrutar de las diferentes experiencias de la escuela, independientemente de la modalidad de asistencia que elijan.
+        </p>
+      </article>
+
+      <!-- Punto 2 -->
+      <article data-reveal="up" data-delay="100" class="rounded-[2rem] bg-white p-7 shadow-sm border border-forest/5 flex items-start gap-4">
+        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-lake/15 text-lake mt-1">
+          <i class="fa-solid fa-compass text-lg"></i>
+        </span>
+        <p class="text-sm sm:text-base leading-relaxed text-forest/80">
+          El cronograma es orientativo y flexible. Si bien contamos con una planificación y propuestas organizadas, estas podrán adaptarse según las edades, los intereses, las necesidades y la dinámica de cada manada.
+        </p>
+      </article>
+
+      <!-- Punto 3 -->
+      <article data-reveal="up" class="rounded-[2rem] bg-white p-7 shadow-sm border border-forest/5 flex items-start gap-4">
+        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-clay/15 text-clay mt-1">
+          <i class="fa-solid fa-horse text-lg"></i>
+        </span>
+        <p class="text-sm sm:text-base leading-relaxed text-forest/80">
+          Las actividades principales, como natación, deportes y experiencias con caballos, estarán presentes todos los días, de lunes a jueves.
+        </p>
+      </article>
+
+      <!-- Punto 4 -->
+      <article data-reveal="up" data-delay="100" class="rounded-[2rem] bg-white p-7 shadow-sm border border-forest/5 flex items-start gap-4">
+        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-lime/30 text-forest mt-1">
+          <i class="fa-solid fa-heart text-base"></i>
+        </span>
+        <p class="text-sm sm:text-base leading-relaxed text-forest/80">
+          Creemos profundamente en respetar los tiempos, deseos y procesos individuales de cada niño. Por eso, ninguna actividad será una obligación. Si algún participante no desea realizar una propuesta en particular, podremos conversarlo, acompañarlo y buscar alternativas, respetando siempre su individualidad.
+        </p>
+      </article>
+
+      <!-- Punto 5 -->
+      <article data-reveal="up" class="rounded-[2rem] bg-white p-7 shadow-sm border border-forest/5 flex items-start gap-4">
+        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-wood/15 text-wood mt-1">
+          <i class="fa-solid fa-palette text-lg"></i>
+        </span>
+        <p class="text-sm sm:text-base leading-relaxed text-forest/80">
+          Las actividades complementarias, como granja, huerta, arte, música, telas y recreación acuática, irán rotando semanalmente, brindando a cada manada la posibilidad de explorar y descubrir nuevas experiencias.
+        </p>
+      </article>
+
+      <!-- Punto 6 -->
+      <article data-reveal="up" data-delay="100" class="rounded-[2rem] bg-white p-7 shadow-sm border border-forest/5 flex items-start gap-4">
+        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-sun/20 text-sun mt-1">
+          <i class="fa-solid fa-sparkles text-lg"></i>
+        </span>
+        <p class="text-sm sm:text-base leading-relaxed text-forest/80">
+          Nuestro propósito es que cada experiencia nazca desde la curiosidad, el disfrute y las ganas de participar, creando un espacio donde cada uno pueda sentirse libre, escuchado y parte de la manada.
+        </p>
+      </article>
+
+    </section>
+
+    <!-- Sección 2: Cronograma Semanal (Imagen 2) -->
+    <section data-reveal="up" class="rounded-[2.5rem] bg-forest text-cream p-6 sm:p-10 shadow-xl">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Cronograma semanal</h2>
+        <p class="mt-2 text-sm sm:text-base text-cream/70">Ejemplo de organización de una jornada de 16:00 a 20:00 hs</p>
+      </div>
+
+      <!-- Tabla responsiva -->
+      <div class="overflow-x-auto rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
+        <table class="w-full min-w-[620px] text-center border-collapse">
+          <thead>
+            <tr class="bg-moss/90 text-cream text-xs sm:text-sm uppercase tracking-wider font-bold">
+              <th class="p-3.5 border-b border-white/10 w-1/5">Horarios</th>
+              <th class="p-3.5 border-b border-white/10 w-1/5">Lunes</th>
+              <th class="p-3.5 border-b border-white/10 w-1/5">Martes</th>
+              <th class="p-3.5 border-b border-white/10 w-1/5">Miércoles</th>
+              <th class="p-3.5 border-b border-white/10 w-1/5">Jueves</th>
+            </tr>
+          </thead>
+          <tbody class="text-xs sm:text-sm font-medium">
+
+            <!-- 16:00 a 16:15 -->
+            <tr class="border-b border-white/10 bg-white/5">
+              <td class="p-3 font-semibold text-lime border-r border-white/10">16:00 a 16:15</td>
+              <td class="p-3 border-r border-white/10 bg-lime/10 text-cream font-medium">Bienvenida y Encuentro</td>
+              <td class="p-3 border-r border-white/10 bg-lime/10 text-cream font-medium">Bienvenida y Encuentro</td>
+              <td class="p-3 border-r border-white/10 bg-lime/10 text-cream font-medium">Bienvenida y Encuentro</td>
+              <td class="p-3 bg-lime/10 text-cream font-medium">Bienvenida y Encuentro</td>
+            </tr>
+
+            <!-- 16:15 a 17:00 -->
+            <tr class="border-b border-white/10">
+              <td class="p-3 font-semibold text-lime border-r border-white/10">16:15 a 17:00</td>
+              <td class="p-3 border-r border-white/10 bg-lake/20 text-cream">Natación</td>
+              <td class="p-3 border-r border-white/10 bg-lake/20 text-cream">Natación</td>
+              <td class="p-3 border-r border-white/10 bg-lake/20 text-cream">Natación</td>
+              <td class="p-3 bg-lake/20 text-cream">Natación</td>
+            </tr>
+
+            <!-- 17:00 a 17:40 -->
+            <tr class="border-b border-white/10 bg-white/5">
+              <td class="p-3 font-semibold text-lime border-r border-white/10">17:00 a 17:40</td>
+              <td class="p-3 border-r border-white/10 bg-clay/20 text-cream">Actividades con caballos</td>
+              <td class="p-3 border-r border-white/10 bg-wood/25 text-cream">Taller de arte</td>
+              <td class="p-3 border-r border-white/10 bg-clay/20 text-cream">Actividades con caballos</td>
+              <td class="p-3 bg-river/25 text-cream">Taller de música</td>
+            </tr>
+
+            <!-- 17:40 a 18:20 -->
+            <tr class="border-b border-white/10">
+              <td class="p-3 font-semibold text-lime border-r border-white/10">17:40 a 18:20</td>
+              <td class="p-3 border-r border-white/10 bg-sun/20 text-cream font-medium">Merienda saludable</td>
+              <td class="p-3 border-r border-white/10 bg-sun/20 text-cream font-medium">Merienda saludable</td>
+              <td class="p-3 border-r border-white/10 bg-sun/20 text-cream font-medium">Merienda saludable</td>
+              <td class="p-3 bg-sun/20 text-cream font-medium">Merienda saludable</td>
+            </tr>
+
+            <!-- 18:20 a 18:40 -->
+            <tr class="border-b border-white/10 bg-white/5">
+              <td class="p-3 font-semibold text-lime border-r border-white/10">18:20 a 18:40</td>
+              <td class="p-3 border-r border-white/10 bg-lake/15 text-cream">Recreación acuática o tiempo libre</td>
+              <td class="p-3 border-r border-white/10 bg-clay/20 text-cream">Actividades con caballos</td>
+              <td class="p-3 border-r border-white/10 bg-lake/15 text-cream">Recreación acuática o tiempo libre</td>
+              <td class="p-3 bg-clay/20 text-cream">Actividades con caballos</td>
+            </tr>
+
+            <!-- 18:40 a 19:20 -->
+            <tr class="border-b border-white/10">
+              <td class="p-3 font-semibold text-lime border-r border-white/10">18:40 a 19:20</td>
+              <td class="p-3 border-r border-white/10 bg-fern/20 text-cream text-[11px] sm:text-xs">
+                Deportes · Fútbol, vóley, telas, preparación física, flexibilidad, baile
+              </td>
+              <td class="p-3 border-r border-white/10 bg-lake/15 text-cream">Recreación acuática o tiempo libre</td>
+              <td class="p-3 border-r border-white/10 bg-fern/20 text-cream text-[11px] sm:text-xs">
+                Deportes · Fútbol, vóley, telas, preparación física, flexibilidad, baile
+              </td>
+              <td class="p-3 bg-lake/15 text-cream">Recreación acuática o tiempo libre</td>
+            </tr>
+
+            <!-- 19:20 a 20:00 -->
+            <tr>
+              <td class="p-3 font-semibold text-lime border-r border-white/10">19:20 a 20:00</td>
+              <td class="p-3 border-r border-white/10 bg-fern/25 text-cream font-medium">Huerta</td>
+              <td class="p-3 border-r border-white/10 bg-fern/20 text-cream text-[11px] sm:text-xs">
+                Deportes · Fútbol, vóley, telas, preparación física, flexibilidad, baile
+              </td>
+              <td class="p-3 border-r border-white/10 bg-wood/20 text-cream font-medium">Granja</td>
+              <td class="p-3 bg-fern/20 text-cream text-[11px] sm:text-xs">
+                Deportes · Fútbol, vóley, telas, preparación física, flexibilidad, baile
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Leyenda de flexibilidad -->
+      <p class="mt-6 text-xs text-center text-cream/60">
+        <i class="fa-solid fa-circle-info mr-1 text-lime"></i>
+        Las actividades rotan periódicamente entre las manadas y se adaptan a las condiciones del clima y la energía del grupo.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Script Reveal -->
+  <script>
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('[data-reveal]');
+      if (reduce || !('IntersectionObserver' in window)) return;
+      var hidden = {
+        up: ['opacity-0', 'translate-y-8']
+      };
+      var base = ['transition-all', 'duration-700', 'ease-out'];
+      els.forEach(function (el) {
+        el.classList.add.apply(el.classList, base.concat(hidden[el.dataset.reveal] || hidden.up));
+        el.style.transitionDelay = (el.dataset.delay || 0) + 'ms';
+      });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          var el = e.target;
+          el.classList.remove.apply(el.classList, hidden[el.dataset.reveal] || hidden.up);
+          io.unobserve(el);
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
